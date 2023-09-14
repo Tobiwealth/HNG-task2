@@ -22,7 +22,7 @@ const Movie = ({movie,credit}) => {
 			</div>
 			<div className="flex flex-col lg:flex-row justify-between items-center gap-12 font-poppins font-medium text-lg lg:text-[23px] text-[#404040] p-4 pl-8 pr-12 mt-4 mb-4">
 				<div className="flex justify-center items-center lg:gap-4 ">
-					<p>{movie.title} • {movie.release_date} • PG-13 </p>
+					<p data-testid= "movie-title">{movie.title} • <span data-testid= "movie-release-date">{movie.release_date}</span> • PG-13 <span data-testid= "movie-runtime">{movie.runtime}m</span> </p>
 					<button className="text-xs md:text-[15px] text-[#B91C1C] bg-white border-2 border-[#F8E7EB] rounded-[15px] w-[84px] h-[30px] ">{movie.genres[0].name}</button>
 					<button className="text-xs md:text-[15px] text-[#B91C1C] bg-white border-2 border-[#F8E7EB] rounded-[15px] w-[84px] h-[30px]">{movie.genres[1].name}</button>
 				</div>
@@ -34,7 +34,7 @@ const Movie = ({movie,credit}) => {
 			</div>
 			<div className="flex flex-col lg:flex-row justify-center  lg:justify-between items-center p-4 lg:pl-8 lg:pr-8" >
 				<div className="text-[20px] font-poppins text-[#333333] flex flex-col gap-4 lg:gap-8">
-					<p className="text-base lg:text-[20px] font-poppins text-[#333333] lg:w-3/4 p-4 pl-0">{movie.overview}</p>
+					<p data-testid= "movie-overview" className="text-base lg:text-[20px] font-poppins text-[#333333] lg:w-3/4 p-4 pl-0">{movie.overview}</p>
 			        <p>Director : <span className="text-[#BE123C]">{director[0].name}</span></p>
 			        <p>Writers :  <span className="text-[#BE123C]">{writers.map(item => <span key={item.id}>{item.name}, </span>)}</span></p>
 			        <p>Stars: <span className="text-[#BE123C]">{
