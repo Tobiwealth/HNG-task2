@@ -38,7 +38,7 @@ const MovieDetails = () => {
 
 	return (
 		<div className="flex w-screen">
-			<div className="hidden lg:flex"><Sidebar/></div>
+			<div className="hidden lg:inline"><Sidebar/></div>
 			<Movie movie={movie} credit={credit}/>
 		</div>
 	)
