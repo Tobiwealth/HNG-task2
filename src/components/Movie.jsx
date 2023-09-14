@@ -16,7 +16,7 @@ const Movie = ({movie,credit}) => {
 	const actors = credit.cast.filter((item) => item.order < 4);
 
 	return (
-		<div className="w-full h-full p-2 mt-6 lg:mt-0 flex flex-col justify-center pb-16">
+		<div className="max-w-full h-full p-2 mt-6 lg:mt-0 flex flex-col justify-center pb-16">
 			<div className="w-full h-full">
 				<img className="w-full h-[449px] rounded-[20px]" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="movie"/>
 			</div>
